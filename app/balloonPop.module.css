@@ -1,0 +1,125 @@
+.container {
+  padding: 2rem;
+  text-align: center;
+  background: linear-gradient(to top, #bae6fd, #e0f7ff);
+  min-height: 100vh;
+  overflow: hidden;
+  font-family: 'Segoe UI', 'Roboto', sans-serif;
+  color: #1e293b;
+}
+
+.setup {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.setup input {
+  padding: 0.7rem 1rem;
+  font-size: 1.1rem;
+  border: 2px solid #cbd5e1;
+  border-radius: 12px;
+  outline: none;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+  background-color: white;
+  min-width: 200px;
+}
+
+.setup input:focus {
+  border-color: #3b82f6;
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.25);
+}
+
+.setup button {
+  padding: 0.7rem 1.4rem;
+  font-size: 1.1rem;
+  font-weight: 600;
+  background: linear-gradient(to right, #3b82f6, #2563eb);
+  color: white;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.setup button:hover {
+  transform: scale(1.05);
+  box-shadow: 0 5px 15px rgba(59, 130, 246, 0.3);
+}
+
+.info {
+  margin: 1rem 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+  font-size: 1.25rem;
+  font-weight: 500;
+  color: #334155;
+}
+
+.playArea {
+  position: relative;
+  width: 100%;
+  height: 60vh;
+  background: linear-gradient(to top, #e0f2ff, #f9fbff);
+  border-radius: 12px;
+  border: 2px dashed #bae6fd;
+  overflow: hidden;
+  box-shadow: inset 0 0 10px rgba(59, 130, 246, 0.15);
+}
+
+/* Balloon visual upgrade */
+.balloon {
+  position: absolute;
+  width: 60px;
+  height: 80px;
+  border-radius: 50% 50% 50% 50% / 60% 60% 40% 40%;
+  border: 2px solid rgba(0, 0, 0, 0.15);
+  cursor: pointer;
+  animation: float 1.2s ease-in-out infinite alternate;
+  box-shadow:
+    inset -4px -4px 10px rgba(255, 255, 255, 0.5),
+    0 6px 15px rgba(0, 0, 0, 0.2);
+  transition: transform 0.2s ease;
+}
+
+.balloon:hover {
+  transform: scale(1.05);
+}
+
+/* Optional bounce effect */
+@keyframes float {
+  from { transform: translateY(0); }
+  to   { transform: translateY(-12px); }
+}
+
+/* Balloon string */
+.balloon::after {
+  content: "";
+  position: absolute;
+  bottom: -25px;
+  left: 50%;
+  width: 2px;
+  height: 27px;
+  background: #444;
+  transform: translateX(-50%);
+  opacity: 0.6;
+}
+
+.history {
+  margin-top: 2rem;
+  padding-left: 3rem;
+  padding-top: 0.5rem;
+  padding-bottom: 1rem;
+  background: #f8fafc;
+  border-radius: 12px;
+  font-size: 1.1rem;
+  color: #475569;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+}

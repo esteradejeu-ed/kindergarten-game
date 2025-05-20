@@ -1,0 +1,103 @@
+.container {
+  text-align: center;
+  padding: 2rem;
+  background: linear-gradient(to bottom, #e0f2ff, #f9fbff);
+  min-height: 100vh;
+  font-family: 'Segoe UI', 'Roboto', sans-serif;
+  color: #1e293b;
+}
+
+.setup {
+  margin-bottom: 2.5rem;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+
+.setup input {
+  padding: 0.7rem 1rem;
+  font-size: 1.1rem;
+  border: 2px solid #cbd5e1;
+  border-radius: 12px;
+  outline: none;
+  background-color: white;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.setup input:focus {
+  border-color: #3b82f6;
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.2);
+}
+
+.setup button {
+  padding: 0.7rem 1.5rem;
+  font-size: 1.1rem;
+  font-weight: 600;
+  background: linear-gradient(to right, #3b82f6, #2563eb);
+  color: white;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: transform 0.2s ease, background-color 0.3s ease, box-shadow 0.2s ease;
+}
+
+.setup button:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 12px rgba(59, 130, 246, 0.4);
+  background: linear-gradient(to right, #2563eb, #1d4ed8);
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(80px, 1fr));
+  justify-content: center;
+  gap: 1.2rem;
+  max-width: 420px;
+  margin: 2rem auto 0;
+}
+
+.card {
+  width: 80px;
+  height: 80px;
+  border-radius: 16px;
+  font-size: 2rem;
+  font-weight: 700;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(to bottom, #d1d5db, #9ca3af);
+  cursor: pointer;
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.25);
+  transition: transform 0.2s ease, background 0.3s ease, box-shadow 0.2s ease;
+  user-select: none;
+}
+
+.card:hover {
+  transform: scale(1.08);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.35);
+}
+
+/* Matched card color gradients */
+.red    { background: linear-gradient(to bottom, #ffc9c9, #ff4d4d); }
+.blue   { background: linear-gradient(to bottom, #d6ecff, #3b82f6); }
+.green  { background: linear-gradient(to bottom, #d2fdd7, #34d399); }
+.yellow { background: linear-gradient(to bottom, #fff8cc, #facc15); }
+.orange { background: linear-gradient(to bottom, #ffe8cc, #f97316); }
+.purple { background: linear-gradient(to bottom, #e9d5ff, #8b5cf6); }
+
+.history {
+  margin-top: 3rem;
+  font-size: 1.1rem;
+  color: #475569;
+  background-color: #f1f5f9;
+  padding-left: 3rem;
+  padding-top: 0.5rem;
+  padding-bottom: 1rem;
+  border-radius: 12px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+  max-width: 500px;
+  margin-left: auto;
+  margin-right: auto;
+}
