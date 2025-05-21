@@ -142,17 +142,20 @@ const timerInterval = useRef<NodeJS.Timeout | null>(null);
 
       <div className={styles.playArea}>
         {balloons.map((b) => (
-          <div
+        <div
             key={b.id}
             className={styles.balloon}
             style={{
-              bottom: `${b.bottom}%`,
-              left: b.left,
-              backgroundColor: b.color,
-              borderColor: b.color,
+                bottom: `${b.bottom}%`,
+                left: b.left,
+                backgroundColor: b.color,
+                borderColor: b.color,
+                pointerEvents: "auto", // ensures responsiveness
+                transition: "transform 0.1s ease", // optional bounce effect
+                
             }}
             onClick={() => popBalloon(b.id)}
-          />
+            />
         ))}
       </div>
 

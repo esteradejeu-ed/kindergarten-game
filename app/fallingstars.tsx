@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useState, useEffect, useRef } from "react";
-import { motion } from "framer-motion";
+import { motion, AnimatePresence } from "framer-motion";
 import styles from "./page.module.css";
 
 const GAME_DURATION_SECONDS = 10;
@@ -161,14 +161,21 @@ export default function FallingStarsGame() {
       </div>
 
       <div className={styles["star-area"]}>
-        {stars.map((star) => (
-          <motion.div
-            key={star.id}
-            className={styles["star"]}
-            style={{ top: `${star.top}px`, left: star.left }}
-            onClick={() => handleStarClick(star.id)}
-          />
-        ))}
+        <AnimatePresence>
+  {stars.map((star) => (
+    <motion.div
+      key={star.id}
+      className={styles["star"]}
+      style={{ top: `${star.top}px`, left: star.left }}
+      onClick={() => handleStarClick(star.id)}
+      initial={{ scale: 1 }}
+      whileTap={{ scale: 0.8 }}
+      exit={{ opacity: 0, scale: 0.5 }}
+      transition={{ duration: 0.2 }}
+    />
+  ))}
+</AnimatePresence>
+
       </div>
 
       {gameActive && (
