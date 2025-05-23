@@ -17,17 +17,17 @@ export default function GameRouter() {
                 <Link to="/">Falling Stars</Link>
                 <Link to="/memory">Color Match</Link>
                 <Link to="/balloon">Balloon Pop</Link>
+                <Link to="/tetris">Tetris</Link>
                 <Link to="/race">Car Race</Link> {/* New Link */}
                 <Link to="/plane-race">Plane Race</Link> {/* New Link */}
-                <Link to="/tetris">Tetris</Link>
             </div>
             <Routes>
                 <Route path="/" element={<FallingStarsGame />} />
                 <Route path="/memory" element={<ColorMatchGame />} />
                 <Route path="/balloon" element={<BalloonPopGame />} />
+                <Route path="/tetris" element={<TetrisGame />} />
                 <Route path="/race" element={<CarRaceGame />} /> {/* New Route */}
                 <Route path="/plane-race" element={<PlaneRaceGame />} /> {/* New Route */}
-                <Route path="/tetris" element={<TetrisGame />} />
             </Routes>
         </Router>
     );

@@ -4,7 +4,7 @@ import React, { useState, useEffect, useRef } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import styles from "./page.module.css";
 
-const GAME_DURATION_SECONDS = 10;
+const GAME_DURATION_SECONDS = 30;
 const HISTORY_KEY = "falling-stars-history";
 
 interface Star {

@@ -3,7 +3,7 @@
 import React, { useEffect, useRef, useState } from "react";
 import styles from "./carRace.module.css";
 
-const GAME_DURATION = 10;
+const GAME_DURATION = 30;
 const TRACK_LENGTH = 100;
 
 interface HistoryEntry {

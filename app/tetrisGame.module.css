@@ -39,6 +39,10 @@
 }
 
 .gameZone{
-    left:45%;
-    position: relative;
+display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #f4f4f4;
+  padding: 1rem;
+  flex-direction: column;
 }

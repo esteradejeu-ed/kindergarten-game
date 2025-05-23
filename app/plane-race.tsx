@@ -3,7 +3,7 @@
 import React, { useEffect, useRef, useState } from "react";
 import styles from "./planeRace.module.css";
 
-const GAME_DURATION = 15; // seconds
+const GAME_DURATION = 30; // seconds
 const COLORS = ["#ff4d4d", "#4da6ff", "#66ff66", "#ffb84d"];
 
 interface Plane {

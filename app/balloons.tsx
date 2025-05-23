@@ -3,7 +3,7 @@
 import React, { useEffect, useRef, useState } from "react";
 import styles from "./balloonPop.module.css";
 
-const GAME_DURATION = 10;
+const GAME_DURATION = 30;
 const HISTORY_KEY = "balloon-pop-history";
 const COLORS = ["#ff4d4d", "#4da6ff", "#66ff66", "#ffff66", "#ffb84d", "#bf80ff", "#FFB3BA", // soft pink
   "#FFDFBA", // peach
